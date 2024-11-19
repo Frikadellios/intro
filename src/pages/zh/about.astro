@@ -1,0 +1,126 @@
+---
+import LatestPosts from '@/components/LatestPosts.astro'
+import OptimizedCover from '@/components/OptimizedPicture.astro'
+import { getConstants } from '@/consts'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import { Icon } from 'astro-icon/components'
+
+const currentLocale = 'zh'
+const constants = getConstants(currentLocale)
+
+const title = `关于 ${constants.SITE_TITLE}`
+const description = constants.SITE_DESCRIPTION
+const tabs = [
+  {
+    icon: 'tabler:yoga',
+    title: '天干',
+    content: 'AstroVerse是专为引人入胜的图文叙事而设计的Astro主题。。',
+    image:
+      'https://images.unsplash.com/photo-1518444133586-02e3d14055c1?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageAlt: '关于Astroverse - 天干'
+  },
+  {
+    icon: 'tabler:swimming',
+    title: '地支',
+    content: '它无缝地融合了视觉和文字内容，赋予创作者以使用高影响力图像传递引人入胜叙事的能力。',
+    image:
+      'https://images.unsplash.com/photo-1524104841405-c92d05621b4e?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageAlt: '关于Astroverse - 地支'
+  },
+  {
+    icon: 'tabler:run',
+    title: '五行',
+    content:
+      '希望通过引人注目的视觉效果和引人入胜的散文使自己的故事脱颖而出的博客作者和内容创作者，AstroVerse为创造沉浸式和具有影响力的数字体验提供了平台。',
+    image:
+      'https://images.unsplash.com/photo-1698765093181-0e07b5842614?q=80&w=2469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    imageAlt: '关于Astroverse - 五行'
+  }
+]
+---
+
+<BaseLayout title={title} description={description}>
+  <h1 class="sr-only">关于{constants.SITE_TITLE}</h1>
+  <div class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+    <div class="relative p-6 md:p-16">
+      <div
+        class="relative z-10 lg:grid lg:grid-cols-12 lg:items-center lg:gap-16"
+      >
+        <div class="mb-10 lg:order-2 lg:col-span-6 lg:col-start-8 lg:mb-0">
+          <h2
+            class="text-2xl font-bold text-neutral-800 dark:text-neutral-200 sm:text-3xl"
+          >
+            {description}
+          </h2>
+
+          <nav
+            class="mt-5 grid gap-4 md:mt-10"
+            aria-label="Tabs"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            {
+              tabs.map((tab, index) => (
+                <button
+                  type="button"
+                  class={`rounded-xl p-4 text-start hover:bg-neutral-200 focus:bg-neutral-200 focus:outline-none hs-tab-active:bg-white hs-tab-active:shadow-md hs-tab-active:hover:border-transparent dark:hover:bg-neutral-700 dark:focus:bg-neutral-700 dark:hs-tab-active:bg-neutral-700 md:p-5 ${index === 0 ? "active" : ""}`}
+                  id={`tabs-with-card-item-${index + 1}`}
+                  data-hs-tab={`#tabs-with-card-${index + 1}`}
+                  aria-controls={`tabs-with-card-${index + 1}`}
+                  role="tab"
+                >
+                  <span class="flex gap-x-6">
+                    <Icon
+                      name={tab.icon}
+                      class="mt-2 size-6 shrink-0 text-neutral-800 hs-tab-active:text-neutral-600 dark:text-neutral-200 dark:hs-tab-active:text-neutral-500 md:size-7"
+                    />
+                    <span class="grow">
+                      <span class="block text-lg font-semibold text-neutral-800 hs-tab-active:text-neutral-600 dark:text-neutral-200 dark:hs-tab-active:text-neutral-500">
+                        {tab.title}
+                      </span>
+                      <span class="mt-1 block text-neutral-800 dark:text-neutral-200 dark:hs-tab-active:text-neutral-200">
+                        {tab.content}
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              ))
+            }
+          </nav>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="relative">
+            <div>
+              {
+                tabs.map((tab, index) => (
+                  <div
+                    id={`tabs-with-card-${index + 1}`}
+                    class={index === 0 ? "" : "hidden"}
+                    role="tabpanel"
+                    aria-labelledby={`tabs-with-card-item-${index + 1}`}
+                  >
+                    <OptimizedCover
+                      class="rounded-xl shadow-xl shadow-neutral-200 dark:shadow-neutral-900/20"
+                      src={tab.image}
+                      alt={tab.imageAlt}
+                    />
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute inset-0 grid size-full grid-cols-12">
+        <div
+          class="col-span-full h-5/6 w-full rounded-xl bg-neutral-100 dark:bg-neutral-800 sm:h-3/4 lg:col-span-7 lg:col-start-6 lg:h-full"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="sr-only">最新文章</h2>
+  <LatestPosts currentLocale={currentLocale} />
+</BaseLayout>

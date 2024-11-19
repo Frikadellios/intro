@@ -1,0 +1,38 @@
+---
+import { ViewTransitions } from 'astro:transitions'
+import BaseHead from '@/components/BaseHead.astro'
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+import { getCurrentLocale } from '@/utils/localeUtils'
+import "@/styles/index.css"
+
+const { title, description, image } = Astro.props
+const lang = getCurrentLocale(Astro.url.pathname)
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <ViewTransitions />
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body
+    class="mx-auto flex min-h-screen max-w-6xl flex-col px-4 dark:prose-invert dark:bg-neutral-900 sm:px-6 lg:px-8"
+  >
+
+    <Header />
+
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script>
+      document.addEventListener('astro:page-load', async () => {
+        const preline: any = await import('preline/dist/preline.js');
+        preline.HSStaticMethods.autoInit();
+      });
+    </script>
+  </body>
+</html>

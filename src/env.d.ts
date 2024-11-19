@@ -1,5 +1,6 @@
 /// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
+declare module 'preline/plugin'
 
 /// <reference lib="dom" />
 /// <reference lib="dom.iterable" />

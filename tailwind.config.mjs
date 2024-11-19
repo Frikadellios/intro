@@ -4,7 +4,8 @@ export default {
   content: [
     './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
     './node_modules/@tailwindcss/**/*',
-    './node_modules/tailwindcss/**'
+    './node_modules/tailwindcss/**',
+    './node_modules/preline/preline.js'
   ],
   theme: {
     extend: {
@@ -41,6 +42,7 @@ export default {
     require('@tailwindcss/typography'),
     require('tailwindcss-animated'),
     require('@tailwindcss/forms'),
-    require('@tailwindcss/container-queries')
+    require('@tailwindcss/container-queries'),
+    require('preline/plugin')
   ]
 }
