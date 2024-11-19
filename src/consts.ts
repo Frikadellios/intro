@@ -1,6 +1,6 @@
-export const SITE = 'https://intro.pages.dev'
-export const SITEMAP = 'https://www.intro.pages.dev/sitemap-0.xml'
-export const HOST = 'intro.pages.dev'
+export const SITE = 'https://intro-3fu.pages.dev'
+export const SITEMAP = 'https://www.intro-3fu.pages.dev/sitemap-0.xml'
+export const HOST = 'intro-3fu.pages.dev'
 
 export const baseLocale = 'en'
 
