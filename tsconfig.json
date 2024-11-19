@@ -1,6 +1,6 @@
 {
   "extends": "astro/tsconfigs/base",
-  "include": [".astro/types.d.ts", ".astro/auto-imports.d.ts", "**/*"],
+  "include": [".astro/types.d.ts", ".astro/auto-imports.d.ts", "**/*", ".astro/icon.d.ts"],
   "compilerOptions": {
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "types": ["@cloudflare/workers-types/2023-07-01", "bun-types"],
