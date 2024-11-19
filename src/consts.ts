@@ -1,6 +1,6 @@
-export const SITE = 'https://about-myself.pages.dev'
-export const SITEMAP = 'https://www.about-myself.pages.dev/sitemap-0.xml'
-export const HOST = 'about-myself.pages.dev'
+export const SITE = 'https://intro.pages.dev'
+export const SITEMAP = 'https://www.intro.pages.dev/sitemap-0.xml'
+export const HOST = 'intro.pages.dev'
 
 export const baseLocale = 'en'
 
