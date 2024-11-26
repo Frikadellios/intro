@@ -12,6 +12,78 @@ const zhTags: TagMap = {
   管理: 'management'
 }
 
+const esTags: TagMap = {
+  reflect: 'reflect',
+  media: 'media',
+  roam: 'roam',
+  risk: 'risk',
+  strategy: 'strategy',
+  allocation: 'allocation',
+  innovation: 'innovation',
+  model: 'model',
+  management: 'management'
+}
+
+const ruTags: TagMap = {
+  reflect: 'reflect',
+  media: 'media',
+  roam: 'roam',
+  risk: 'risk',
+  strategy: 'strategy',
+  allocation: 'allocation',
+  innovation: 'innovation',
+  model: 'model',
+  management: 'management'
+}
+
+const ukTags: TagMap = {
+  reflect: 'reflect',
+  media: 'media',
+  roam: 'roam',
+  risk: 'risk',
+  strategy: 'strategy',
+  allocation: 'allocation',
+  innovation: 'innovation',
+  model: 'model',
+  management: 'management'
+}
+
+const frTags: TagMap = {
+  reflect: 'reflect',
+  media: 'media',
+  roam: 'roam',
+  risk: 'risk',
+  strategy: 'strategy',
+  allocation: 'allocation',
+  innovation: 'innovation',
+  model: 'model',
+  management: 'management'
+}
+
+const deTags: TagMap = {
+  reflect: 'reflect',
+  media: 'media',
+  roam: 'roam',
+  risk: 'risk',
+  strategy: 'strategy',
+  allocation: 'allocation',
+  innovation: 'innovation',
+  model: 'model',
+  management: 'management'
+}
+
+const plTags: TagMap = {
+  reflect: 'reflect',
+  media: 'media',
+  roam: 'roam',
+  risk: 'risk',
+  strategy: 'strategy',
+  allocation: 'allocation',
+  innovation: 'innovation',
+  model: 'model',
+  management: 'management'
+}
+
 const enTags: TagMap = {
   reflect: 'reflect',
   media: 'media',
@@ -26,6 +98,12 @@ const enTags: TagMap = {
 
 const tagMappings: Record<string, TagMap> = {
   zh: zhTags,
+  es: esTags,
+  ru: ruTags,
+  fr: frTags,
+  pl: plTags,
+  uk: ukTags,
+  de: deTags,
   en: enTags
 }
 
@@ -39,6 +117,12 @@ function createReverseMapping(tagMap: TagMap): TagMap {
 
 const reverseTagMappings: Record<string, TagMap> = {
   zh: createReverseMapping(zhTags),
+  es: createReverseMapping(esTags),
+  de: createReverseMapping(deTags),
+  fr: createReverseMapping(frTags),
+  uk: createReverseMapping(ukTags),
+  ru: createReverseMapping(ruTags),
+  pl: createReverseMapping(plTags),
   en: createReverseMapping(enTags)
 }
 
@@ -57,6 +141,30 @@ export function getTagByLanguage(tag: string, fromLang: string, toLang: string):
 
 export function getEnglishTag(tag: string, fromLang: string): string {
   return getTagByLanguage(tag, fromLang, 'en')
+}
+
+export function getRussianTag(tag: string, fromLang: string): string {
+  return getTagByLanguage(tag, fromLang, 'ru')
+}
+
+export function getSpainTag(tag: string, fromLang: string): string {
+  return getTagByLanguage(tag, fromLang, 'es')
+}
+
+export function getFranceTag(tag: string, fromLang: string): string {
+  return getTagByLanguage(tag, fromLang, 'fr')
+}
+
+export function getUkraineTag(tag: string, fromLang: string): string {
+  return getTagByLanguage(tag, fromLang, 'uk')
+}
+
+export function getPollandTag(tag: string, fromLang: string): string {
+  return getTagByLanguage(tag, fromLang, 'pl')
+}
+
+export function getGermanTag(tag: string, fromLang: string): string {
+  return getTagByLanguage(tag, fromLang, 'de')
 }
 
 export function getChineseTag(tag: string, fromLang: string): string {

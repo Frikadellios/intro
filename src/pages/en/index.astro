@@ -4,9 +4,9 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 import Card from '@/components/CommonCard.astro'
 import HeroCard from '@/components/HeroCard.astro'
 import Pagination from '@/components/Pagination.astro'
+import IndexSchema from '@/components/seo/IndexSchema.astro'
 import { getConstants } from '@/consts'
 import BaseLayout from '@/layouts/BaseLayout.astro'
-import IndexSchema from '@/components/seo/IndexSchema.astro'
 
 const currentLocale = 'en'
 const constants = getConstants(currentLocale)

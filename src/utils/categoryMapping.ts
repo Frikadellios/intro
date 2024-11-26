@@ -12,8 +12,50 @@ const enCategories: CategoryMap = {
   build: 'build'
 }
 
+const plCategories: CategoryMap = {
+  life: 'life',
+  invest: 'invest',
+  build: 'build'
+}
+
+const ukCategories: CategoryMap = {
+  life: 'life',
+  invest: 'invest',
+  build: 'build'
+}
+
+const esCategories: CategoryMap = {
+  life: 'life',
+  invest: 'invest',
+  build: 'build'
+}
+
+const frCategories: CategoryMap = {
+  life: 'life',
+  invest: 'invest',
+  build: 'build'
+}
+
+const ruCategories: CategoryMap = {
+  life: 'life',
+  invest: 'invest',
+  build: 'build'
+}
+
+const deCategories: CategoryMap = {
+  life: 'life',
+  invest: 'invest',
+  build: 'build'
+}
+
 const categoryMappings: Record<string, CategoryMap> = {
   zh: zhCategories,
+  es: esCategories,
+  fr: frCategories,
+  ru: ruCategories,
+  uk: ukCategories,
+  de: deCategories,
+  pl: plCategories,
   en: enCategories
 }
 
@@ -27,6 +69,12 @@ function createReverseMapping(categoryMap: CategoryMap): CategoryMap {
 
 const reverseCategoryMappings: Record<string, CategoryMap> = {
   zh: createReverseMapping(zhCategories),
+  fr: createReverseMapping(frCategories),
+  pl: createReverseMapping(plCategories),
+  de: createReverseMapping(deCategories),
+  es: createReverseMapping(esCategories),
+  uk: createReverseMapping(ukCategories),
+  ru: createReverseMapping(ruCategories),
   en: createReverseMapping(enCategories)
 }
 
@@ -45,6 +93,30 @@ export function getCategoryByLanguage(category: string, fromLang: string, toLang
 
 export function getEnglishCategory(category: string, fromLang: string): string {
   return getCategoryByLanguage(category, fromLang, 'en')
+}
+
+export function getSpainCategory(category: string, fromLang: string): string {
+  return getCategoryByLanguage(category, fromLang, 'es')
+}
+
+export function getRussianCategory(category: string, fromLang: string): string {
+  return getCategoryByLanguage(category, fromLang, 'ru')
+}
+
+export function getUkrainianCategory(category: string, fromLang: string): string {
+  return getCategoryByLanguage(category, fromLang, 'uk')
+}
+
+export function getPollandCategory(category: string, fromLang: string): string {
+  return getCategoryByLanguage(category, fromLang, 'pl')
+}
+
+export function getFranceCategory(category: string, fromLang: string): string {
+  return getCategoryByLanguage(category, fromLang, 'fr')
+}
+
+export function getGermanCategory(category: string, fromLang: string): string {
+  return getCategoryByLanguage(category, fromLang, 'de')
 }
 
 export function getChineseCategory(category: string, fromLang: string): string {

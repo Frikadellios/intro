@@ -16,6 +16,24 @@ switch (currentLocale) {
   case 'zh':
     navData = await import('@/utils/zh/footernav')
     break
+  case 'es':
+    navData = await import('@/utils/es/footernav')
+    break
+  case 'ru':
+    navData = await import('@/utils/ru/footernav')
+    break
+  case 'fr':
+    navData = await import('@/utils/fr/footernav')
+    break
+  case 'de':
+    navData = await import('@/utils/de/footernav')
+    break
+  case 'uk':
+    navData = await import('@/utils/uk/footernav')
+    break
+  case 'pl':
+    navData = await import('@/utils/pl/footernav')
+    break
   default:
     navData = await import('@/utils/en/footernav')
     break

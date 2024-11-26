@@ -74,10 +74,154 @@ const enConstants: LanguageConstants = {
   FOOTER_LIFE: 'Life'
 }
 
+const plConstants: LanguageConstants = {
+  BrandName: 'Astroverse',
+  SITE_TITLE: 'Astroverse',
+  SITE_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  TAGS_TITLE: 'All Tags',
+  TAGS_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  SEARCH_PAGE_TITLE: 'Site Search',
+  SEARCH_PAGE_DESCRIPTION: 'Search all content on Astroverse',
+  GO_TO_HOMEPAGE: 'Go to Homepage',
+  ERROR_404_SUBMESSAGE: "The page you're looking for doesn't exist or has been moved.",
+  ERROR_404_MESSAGE: 'Page not found',
+  ERROR_404_DESCRIPTION: '404 - Page not found',
+  ERROR_404_TITLE: '404 - Page Not Found',
+  UPDATED_ON: 'Updated on',
+  PUBLISHED_ON: 'Published on',
+  TAGS_HEADING: 'Tags',
+  FOOTER_ABOUT: 'About Us',
+  FOOTER_BUILD: 'Build',
+  FOOTER_INVEST: 'Invest',
+  FOOTER_LIFE: 'Life'
+}
+
+const deConstants: LanguageConstants = {
+  BrandName: 'Astroverse',
+  SITE_TITLE: 'Astroverse',
+  SITE_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  TAGS_TITLE: 'All Tags',
+  TAGS_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  SEARCH_PAGE_TITLE: 'Site Search',
+  SEARCH_PAGE_DESCRIPTION: 'Search all content on Astroverse',
+  GO_TO_HOMEPAGE: 'Go to Homepage',
+  ERROR_404_SUBMESSAGE: "The page you're looking for doesn't exist or has been moved.",
+  ERROR_404_MESSAGE: 'Page not found',
+  ERROR_404_DESCRIPTION: '404 - Page not found',
+  ERROR_404_TITLE: '404 - Page Not Found',
+  UPDATED_ON: 'Updated on',
+  PUBLISHED_ON: 'Published on',
+  TAGS_HEADING: 'Tags',
+  FOOTER_ABOUT: 'About Us',
+  FOOTER_BUILD: 'Build',
+  FOOTER_INVEST: 'Invest',
+  FOOTER_LIFE: 'Life'
+}
+
+const ukConstants: LanguageConstants = {
+  BrandName: 'Astroverse',
+  SITE_TITLE: 'Astroverse',
+  SITE_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  TAGS_TITLE: 'All Tags',
+  TAGS_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  SEARCH_PAGE_TITLE: 'Site Search',
+  SEARCH_PAGE_DESCRIPTION: 'Search all content on Astroverse',
+  GO_TO_HOMEPAGE: 'Go to Homepage',
+  ERROR_404_SUBMESSAGE: "The page you're looking for doesn't exist or has been moved.",
+  ERROR_404_MESSAGE: 'Page not found',
+  ERROR_404_DESCRIPTION: '404 - Page not found',
+  ERROR_404_TITLE: '404 - Page Not Found',
+  UPDATED_ON: 'Updated on',
+  PUBLISHED_ON: 'Published on',
+  TAGS_HEADING: 'Tags',
+  FOOTER_ABOUT: 'About Us',
+  FOOTER_BUILD: 'Build',
+  FOOTER_INVEST: 'Invest',
+  FOOTER_LIFE: 'Life'
+}
+
+const frConstants: LanguageConstants = {
+  BrandName: 'Astroverse',
+  SITE_TITLE: 'Astroverse',
+  SITE_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  TAGS_TITLE: 'All Tags',
+  TAGS_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  SEARCH_PAGE_TITLE: 'Site Search',
+  SEARCH_PAGE_DESCRIPTION: 'Search all content on Astroverse',
+  GO_TO_HOMEPAGE: 'Go to Homepage',
+  ERROR_404_SUBMESSAGE: "The page you're looking for doesn't exist or has been moved.",
+  ERROR_404_MESSAGE: 'Page not found',
+  ERROR_404_DESCRIPTION: '404 - Page not found',
+  ERROR_404_TITLE: '404 - Page Not Found',
+  UPDATED_ON: 'Updated on',
+  PUBLISHED_ON: 'Published on',
+  TAGS_HEADING: 'Tags',
+  FOOTER_ABOUT: 'About Us',
+  FOOTER_BUILD: 'Build',
+  FOOTER_INVEST: 'Invest',
+  FOOTER_LIFE: 'Life'
+}
+
+const ruConstants: LanguageConstants = {
+  BrandName: 'Astroverse',
+  SITE_TITLE: 'Astroverse',
+  SITE_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  TAGS_TITLE: 'All Tags',
+  TAGS_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  SEARCH_PAGE_TITLE: 'Site Search',
+  SEARCH_PAGE_DESCRIPTION: 'Search all content on Astroverse',
+  GO_TO_HOMEPAGE: 'Go to Homepage',
+  ERROR_404_SUBMESSAGE: "The page you're looking for doesn't exist or has been moved.",
+  ERROR_404_MESSAGE: 'Page not found',
+  ERROR_404_DESCRIPTION: '404 - Page not found',
+  ERROR_404_TITLE: '404 - Page Not Found',
+  UPDATED_ON: 'Updated on',
+  PUBLISHED_ON: 'Published on',
+  TAGS_HEADING: 'Tags',
+  FOOTER_ABOUT: 'About Us',
+  FOOTER_BUILD: 'Build',
+  FOOTER_INVEST: 'Invest',
+  FOOTER_LIFE: 'Life'
+}
+
+const esConstants: LanguageConstants = {
+  BrandName: 'Astroverse',
+  SITE_TITLE: 'Astroverse',
+  SITE_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  TAGS_TITLE: 'All Tags',
+  TAGS_DESCRIPTION: 'An Astro Theme for Visual Storytelling',
+  SEARCH_PAGE_TITLE: 'Site Search',
+  SEARCH_PAGE_DESCRIPTION: 'Search all content on Astroverse',
+  GO_TO_HOMEPAGE: 'Go to Homepage',
+  ERROR_404_SUBMESSAGE: "The page you're looking for doesn't exist or has been moved.",
+  ERROR_404_MESSAGE: 'Page not found',
+  ERROR_404_DESCRIPTION: '404 - Page not found',
+  ERROR_404_TITLE: '404 - Page Not Found',
+  UPDATED_ON: 'Updated on',
+  PUBLISHED_ON: 'Published on',
+  TAGS_HEADING: 'Tags',
+  FOOTER_ABOUT: 'About Us',
+  FOOTER_BUILD: 'Build',
+  FOOTER_INVEST: 'Invest',
+  FOOTER_LIFE: 'Life'
+}
+
 export function getConstants(lang: SupportedLocale): LanguageConstants {
   switch (lang) {
     case 'zh':
       return zhConstants
+    case 'ru':
+      return ruConstants
+    case 'uk':
+      return ukConstants
+    case 'fr':
+      return frConstants
+    case 'es':
+      return esConstants
+    case 'de':
+      return deConstants
+    case 'pl':
+      return plConstants
     default:
       return enConstants
   }

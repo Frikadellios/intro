@@ -4,7 +4,13 @@ export const supportedLanguages = ['de', 'en', 'es', 'zh', 'fr', 'pl', 'ru', 'uk
 
 export const languageNames: Record<string, string> = {
   en: 'English',
-  zh: '中文'
+  zh: '中文',
+  fr: 'Français',
+  es: 'Español',
+  ru: 'Русский',
+  uk: 'Українська',
+  de: 'German',
+  pl: 'Polski'
 }
 
 export function getCurrentLocale(pathname: string): SupportedLocale {
